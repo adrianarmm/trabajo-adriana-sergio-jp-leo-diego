@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>main.cpp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #b3ae60;}
+.s1 { color: #6aab73;}
+.s2 { color: #bcbec4;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+.s5 { color: #7a7e85;}
+.s6 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.cpp</font>
+</center></td></tr></table>
+<pre><span class="s0">#include</span><span class="s1">&lt;iostream&gt;</span>
+<span class="s0">#include</span><span class="s1">&lt;stdexcept&gt;</span>
+
+<span class="s3">void </span><span class="s2">lanzaExcepcion</span><span class="s4">() {</span>
+    <span class="s3">throw </span><span class="s2">std</span><span class="s4">::</span><span class="s2">runtime_error</span><span class="s4">(</span><span class="s1">&quot;Error en la función lanzaExcepcion&quot;</span><span class="s4">);</span>
+<span class="s4">}</span>
+
+<span class="s3">int </span><span class="s2">main</span><span class="s4">() {</span>
+    <span class="s3">try </span><span class="s4">{</span>
+        <span class="s3">try </span><span class="s4">{</span>
+            <span class="s2">lanzaExcepcion</span><span class="s4">();</span>
+        <span class="s4">}</span>
+        <span class="s3">catch </span><span class="s4">(</span><span class="s3">const </span><span class="s2">std</span><span class="s4">::</span><span class="s2">runtime_error</span><span class="s4">&amp; </span><span class="s2">e</span><span class="s4">) {</span>
+            <span class="s2">std</span><span class="s4">::</span><span class="s2">cout </span><span class="s4">&lt;&lt; </span><span class="s1">&quot;Excepción capturada y manejada. Reactivando...&quot; </span><span class="s4">&lt;&lt; </span><span class="s2">std</span><span class="s4">::</span><span class="s2">endl</span><span class="s4">;</span>
+            <span class="s3">throw</span><span class="s4">; </span><span class="s5">// Relanza la excepción</span>
+        <span class="s4">}</span>
+    <span class="s4">}</span>
+    <span class="s3">catch </span><span class="s4">(</span><span class="s3">const </span><span class="s2">std</span><span class="s4">::</span><span class="s2">runtime_error</span><span class="s4">&amp; </span><span class="s2">e</span><span class="s4">) {</span>
+        <span class="s2">std</span><span class="s4">::</span><span class="s2">cout </span><span class="s4">&lt;&lt; </span><span class="s1">&quot;Excepción reactivada capturada: &quot; </span><span class="s4">&lt;&lt; </span><span class="s2">e</span><span class="s4">.</span><span class="s2">what</span><span class="s4">() &lt;&lt; </span><span class="s2">std</span><span class="s4">::</span><span class="s2">endl</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s3">return </span><span class="s6">0</span><span class="s4">;</span>
+<span class="s4">}</span></pre>
+</body>
+</html>

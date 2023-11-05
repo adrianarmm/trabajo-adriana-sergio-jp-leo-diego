@@ -1,0 +1,3 @@
+C:/Users/Oblitionmaster/Documents/GitHub/Excepciones/cmake-build-debug/CMakeFiles/Excepciones.dir
+C:/Users/Oblitionmaster/Documents/GitHub/Excepciones/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Oblitionmaster/Documents/GitHub/Excepciones/cmake-build-debug/CMakeFiles/rebuild_cache.dir
